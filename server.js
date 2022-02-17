@@ -33,13 +33,11 @@ const server = http.createServer((req, res) => {
     res.setHeader('Content-Type', 'test/html')
     res.end('<h1>Hello, World!</h1>')
 })
-
-
-
-
 // Start the `server` const listening on the port defined by argument in your `port` const. 
 // Put the exact message `Server listening on port ${port}` on the console log. 
-
+server.listen(port, () => {
+    console.log(`Server running at port $(port)`)
+})
 
 
 
