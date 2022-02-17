@@ -1,7 +1,7 @@
 {
   "name": "my-webserver",
   "version": "0.0.1",
-  "description": "A webserver that takes a port number as an arguement",
+  "description": "A webserver that takes a port number as an argument. ",
   "main": "server.js",
   "scripts": {
     "test": "PORT=\"$(shuf -i 2000-65535 -n 1)\"; (timeout --signal=SIGINT 5 node server.js --port=$PORT; exit 0) & sleep 1s && curl -vI http://localhost:${PORT} && sleep 5s",
